@@ -14,7 +14,7 @@ const routes: Routes = [
         loadChildren: './recipes/recipes.module#RecipesPageModule'
       },
       {
-        path: 'recipe-detail',
+        path: ':recipeId',
         loadChildren: './recipes/recipe-detail/recipe-detail.module#RecipeDetailPageModule'
       }
     ]

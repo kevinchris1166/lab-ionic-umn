@@ -40,4 +40,8 @@ export class RecipesPage implements OnInit {
     console.log("Resep dengan ID: " + recipeId + "dihapus");
   }
 
+  ionViewWillEnter(){
+    this.recipes = this.recipesService.getAllRecipes();
+  }
+
 }
