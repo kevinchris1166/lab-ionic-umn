@@ -10,11 +10,24 @@ import { IonItemSliding } from '@ionic/angular';
 })
 export class BookingsPage implements OnInit {
   loadedBookings: Booking[];
+  myBookings: import("/Users/kevinchristian/Documents/Mobile Cross Platform/labionic/week07/src/app/places/place.model").Place[];
 
   constructor(private bookingService: BookingService) { }
 
   ngOnInit() {
     this.loadedBookings = this.bookingService.bookings;
+    this.myBookings = this.bookingService.getMyBookings();
+    console.log(this.myBookings);
+  }
+
+  ionViewWillEnter(){
+    this.myBookings = this.bookingService.getMyBookings();
+    console.log(this.myBookings);
+  }
+
+  onCancelMyBooking(id: string){
+    this.bookingService.removeFromMyBookings(id);
+    this.myBookings = this.bookingService.getMyBookings();
   }
 
   onCancel(offerId: string, slidingEl: IonItemSliding) {
