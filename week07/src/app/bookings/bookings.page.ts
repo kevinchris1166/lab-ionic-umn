@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BookingService } from './booking.service';
 import { Booking } from './booking.model';
 import { IonItemSliding } from '@ionic/angular';
+import { Place } from '../places/place.model';
 
 @Component({
   selector: 'app-bookings',
@@ -10,7 +11,7 @@ import { IonItemSliding } from '@ionic/angular';
 })
 export class BookingsPage implements OnInit {
   loadedBookings: Booking[];
-  myBookings: import("/Users/kevinchristian/Documents/Mobile Cross Platform/labionic/week07/src/app/places/place.model").Place[];
+  myBookings: Place[];
 
   constructor(private bookingService: BookingService) { }
 

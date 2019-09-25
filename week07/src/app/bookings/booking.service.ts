@@ -22,6 +22,7 @@ export class BookingService {
 
   addToMyBookings(p:Place){
     this.myBookings.push(p);
+    console.log(this.myBookings);
   }
 
   removeFromMyBookings(id:string){
