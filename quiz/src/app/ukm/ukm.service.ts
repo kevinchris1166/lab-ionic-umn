@@ -51,4 +51,10 @@ export class UkmService {
     return [...this.myUkm];
   }
 
+  removeFromMyUkm(id:string){
+    this.myUkm = this.myUkm.filter(p => {
+      return p.id !== id;
+    })
+  }
+
 }

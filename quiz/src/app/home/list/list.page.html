@@ -16,19 +16,10 @@
               </ion-card-header>
               <ion-card-content>
                 <p>{{ load.description }}</p>
-                <ion-button color="primary" (click)="onJoinUkm(load)">Join!</ion-button>
               </ion-card-content>
-              <div text-right padding>
-                <!-- <ion-button 
-                  fill="clear"
-                  color="primary"
-                  [routerLink]="[
-                    '/',
-                    'places',
-                    'tabs',
-                    'discover',
-                    loadedPlaces[0].id]">More</ion-button> -->
-              </div>
+              <div text-right>
+                  <ion-button fill="clear" color="primary" (click)="onJoinUkm(load)">Join!</ion-button>
+                </div>
             </ion-card>
           </ion-col>
         </ion-row>
