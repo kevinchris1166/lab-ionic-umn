@@ -20,14 +20,13 @@ export class ProfilePage implements OnInit {
     console.log(this.myUkm);
   }
 
-  ionViewWillEnter(){
-    this.myUkm = this.ukmService.getMyUkm();
-    console.log(this.myUkm);
-  }
-
   onRemoveMyUkm(id: string){
     this.ukmService.removeFromMyUkm(id);
     this.myUkm = this.ukmService.getMyUkm();
   }
 
+  ionViewWillEnter(){
+    this.myUkm = this.ukmService.getMyUkm();
+    console.log(this.myUkm);
+  }
 }

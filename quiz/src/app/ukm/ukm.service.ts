@@ -11,28 +11,28 @@ export class UkmService {
   private _ukms: Ukm[] = [
     new Ukm(
       'u1',
-      'Basket',
-      'Basket ada UKM blabla bla..'
+      'Tennis',
+      'Tennis adalah UKM yang ada di UMN'
     ),
     new Ukm(
       'u2',
-      'Drama',
-      'Drama ada UKM blabla bla..'
+      'Basket',
+      'Basket adalah UKM yang ada di UMN'
     ),
     new Ukm(
       'u3',
-      'Futsal',
-      'Futsal ada UKM blabla bla..'
+      'Kasti',
+      'Kasti adalah UKM yang ada di UMN'
     ),
     new Ukm(
       'u4',
-      'Volly',
-      'Volly ada UKM blabla bla..'
+      'Teater',
+      'Teater adalah UKM yang ada di UMN'
     ),
     new Ukm(
       'u5',
-      'UMN PC',
-      'UMN PC ada UKM blabla bla..'
+      'Game',
+      'Game adalah UKM yang ada di UMN'
     )
   ]
 
@@ -42,13 +42,13 @@ export class UkmService {
     return [...this._ukms];
   }
 
+  getMyUkm(){
+    return [...this.myUkm];
+  }
+
   addToMyUkm(u:Ukm){
     this.myUkm.push(u);
     console.log(this.myUkm);
-  }
-
-  getMyUkm(){
-    return [...this.myUkm];
   }
 
   removeFromMyUkm(id:string){

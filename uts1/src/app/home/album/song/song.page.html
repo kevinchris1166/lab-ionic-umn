@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-back-button slot="start" defaultHref="/home"></ion-back-button>
+    <ion-title>Songs</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let load of song">
+      <b>{{ load.title }}</b>
+      <p>{{load.minute}} minutes {{load.second}} seconds</p>
+      <ion-icon name="heart" [color] = "load.fav===true ?'danger':''" (click)="favorite(load)"></ion-icon>
+  </ion-card>
+  <p text-center>Total songs : {{song.length}} songs</p>
+
+</ion-content>

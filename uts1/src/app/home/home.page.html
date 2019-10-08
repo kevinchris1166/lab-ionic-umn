@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="end">
+            <ion-menu-button menu="m1"></ion-menu-button>
+          </ion-buttons>
+      <ion-title>
+        Music Library
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card *ngFor="let load of loadedAlbum" [routerLink]="['/', 'album', load.id]">
+              <ion-card-header>
+                  <ion-img [src]="load.imgUrl"></ion-img>
+                </ion-card-header>
+              <ion-card-content>
+                  <ion-card-title>{{ load.name }}</ion-card-title>
+                  <p>{{ load.artist }}</p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-content>
+  
+  

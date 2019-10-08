@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>My Favorite Songs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h3>Songs</h3>
+  <ion-card *ngFor="let load of favoriteSongs">
+    <b>{{load.title}}</b>
+    <p>{{load.minute}} minutes {{load.second}} seconds</p>
+  </ion-card>
+</ion-content>

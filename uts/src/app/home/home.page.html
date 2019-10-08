@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Music Library
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+            <ion-virtual-scroll [items]="loadedAlbum" approxItemHeight="72px">
+              <ion-card
+                *virtualItem="let load"
+                [routerLink]="['/', 'home', 'album', load.id]"
+                detail>
+                <ion-thumbnail slot="start">
+                  <ion-img [src]="load.imgUrl"></ion-img>
+                </ion-thumbnail>
+                <ion-label>
+                  <h2>{{ load.name }}</h2>
+                  <p>{{ load.artist }}</p>
+                </ion-label>
+              </ion-card>
+            </ion-virtual-scroll>
+          <!-- <ion-card *ngFor="let load of loadedAlbum" [routerLink]="['/', 'home', 'album', load.id]">
+            <ion-card-header>
+                <img [src]="load.imgUrl" />
+              </ion-card-header>
+            <ion-card-content>
+                <ion-card-title>{{ load.name }}</ion-card-title>
+                <p>{{ load.artist }}</p>
+            </ion-card-content>
+          </ion-card> -->
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+

@@ -1,20 +1,19 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>profile</ion-title>
+    <ion-title>Profile</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div text-center padding>
     <ion-icon name="contact" size="large"></ion-icon><br>
-    <ion-text>Kevin Christian</ion-text><br>
-    <ion-text>00000013308</ion-text>
+    <ion-text>Livia Jessica</ion-text><br>
+    <ion-text>00000013091</ion-text>
   </div>
   <div text-center>
     <ion-text>My UKMs</ion-text>
   </div>
-    <ion-list>
-      <ion-item-sliding *ngFor="let myU of myUkm" #slidingBooking>
+      <ion-item-sliding *ngFor="let myU of myUkm">
         <ion-card>
           <ion-item>
             <ion-label>
@@ -28,6 +27,5 @@
           </ion-item-options>
        </ion-card>
       </ion-item-sliding>
-    </ion-list>
 
 </ion-content>

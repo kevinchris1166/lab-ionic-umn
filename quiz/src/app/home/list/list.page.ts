@@ -25,14 +25,14 @@ export class ListPage implements OnInit {
         message: 'Beneran Mau Join?',
         buttons: [
           {
-            text: 'Batal!',
+            text: 'Batal',
             role: 'cancel',
             cssClass: 'secondary',
             handler: (blah) => {
-              console.log('Confirm Cancel: blah');
+              console.log('test cancel');
             }
           }, {
-            text: 'Serius!',
+            text: 'Serius',
             handler: () => {
               this.ukmService.addToMyUkm(load);
             }
